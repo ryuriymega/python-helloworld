@@ -4,7 +4,7 @@ metadata:
   labels:
     app: python-helloworld
   name: python-helloworld
-  namespace: default 
+  namespace: default
 spec:
   replicas: 3
   selector:
@@ -21,10 +21,10 @@ spec:
         app: python-helloworld
     spec:
       containers:
-      - image: sellsystems/python-helloworld:latest
-        imagePullPolicy: IfNotPresent
-        name: python-helloworld
-        resources:
-          requests:
-            cpu: 50m
-            memory: 256Mi
+        - image: 'sellsystems/python-helloworld:latest'
+          imagePullPolicy: IfNotPresent
+          name: python-helloworld
+          resources:
+            requests:
+              cpu: 50m
+              memory: 256Mi
